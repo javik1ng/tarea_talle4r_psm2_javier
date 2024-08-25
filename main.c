@@ -16,7 +16,7 @@ void main (void) {
 	scanf("%d",&b);
 
 	//Se imprime el valor del promedio
-	printf("El promedio de los dos valores es: \n%d",(float)((a+b)/2));
+	printf("El promedio de los dos valores es: \n%f",(float)((a+b)/2));
 
 	return 0;
 }
