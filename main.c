@@ -43,14 +43,27 @@ void main (void) {
 		}
 
 	}
-	printf("Los divisores son: \n");
+	printf("Los divisores son: \n"); 
 
 	for(int i=0;i<100;i++){
 		if(divisores[i]!=0){
 			printf("%d",divisores[i]);
 		}
-	}
+	 }
 
+    // Llamar a la función para calcular el MCD
+    int mcd = calcularMCD(a, b);
+    printf("El MCD de %d y %d es: %d\n", a, b, mcd);
 
-	return 0;
+    return;
+}
+
+// Nueva función para calcular el MCD
+int calcularMCD(int x, int y) {
+    while (y != 0) {
+        int temp = y;
+        y = x % y;
+        x = temp;
+    }
+    return x;
 }
