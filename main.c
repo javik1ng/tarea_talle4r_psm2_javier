@@ -43,7 +43,7 @@ void main (void) {
 		}
 
 	}
-	printf("Los divisores son: \n")
+	printf("Los divisores son: \n");
 
 	for(int i=0;i<100;i++){
 		if(divisores[i]!=0){
