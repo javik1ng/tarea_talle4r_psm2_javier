@@ -55,15 +55,25 @@ void main (void) {
     int mcd = calcularMCD(a, b);
     printf("El MCD de %d y %d es: %d\n", a, b, mcd);
 
+    // Llamamos a la nueva función para calcular la suma de los divisores
+    int suma = suma_divisores(divisores, contador);
+    printf("\nLa suma de los divisores es: %d\n", suma);
+
     return;
+
+// Implementación de la función suma_divisores
+int suma_divisores(int divisores[], int tamaño) {
+    int suma = 0;
+    for(int i = 0; i < tamaño; i++){
+        suma += divisores[i];
+    }
+    
 }
 
-// Nueva función para calcular el MCD
-int calcularMCD(int x, int y) {
-    while (y != 0) {
-        int temp = y;
-        y = x % y;
-        x = temp;
-    }
-    return x;
+// Implementación de la función mcd
+int mcd(int num1, int num2) {
+    if (num2 == 0)
+        return num1;
+    else
+        return mcd(num2, num1 % num2);
 }
