@@ -15,8 +15,42 @@ void main (void) {
 	printf("Introducir el 2do valor: ");
 	scanf("%d",&b);
 
+	//Se calcula el promedio
+ 	float promedio= ((a+b)/2*1.0);
+
 	//Se imprime el valor del promedio
-	printf("El promedio de los dos valores es: \n%f",(float)((a+b)/2));
+	printf("El promedio de los dos valores es: \n%f",promedio);
+
+	//Se crea vector de divisores suponiendo que el numero promedio tiene menos de 100 divisores
+	int divisores[100];
+
+	//Se limpia el vector de datos basura
+	for(int i=0;i<100;i++){
+		divisores[i]=0;
+	}
+	//Se calcula los divisores y se ponen en el vector
+
+	int contador=0;
+	for(int i=1;(promedio/2);i++){ //Los divisores van desde el 1 hasta la mitad del numero
+
+		if(promedio%i==0){
+			
+			//Se agrega los divisores en el vector de divisores
+			divisores[contador]=i;
+
+			//Se aumenta en 1
+			contador++;
+		}
+
+	}
+	printf("Los divisores son: \n")
+
+	for(int i=0;i<100;i++){
+		if(divisores[i]!=0){
+			printf("%d",divisores[i]);
+		}
+	}
+
 
 	return 0;
 }
