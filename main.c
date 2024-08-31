@@ -67,6 +67,8 @@ int suma_divisores(int divisores[], int tamaño) {
     for(int i = 0; i < tamaño; i++){
         suma += divisores[i];
     }
+
+	return(suma);
     
 }
 
